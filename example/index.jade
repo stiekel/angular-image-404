@@ -1,0 +1,29 @@
+doctype html
+html(ng-app="app")
+  head
+    title Angular Image 404 directive example
+    link(type="text/css", rel="stylesheet", href="#{bundleFileName.css}")
+  body
+    .container(ng-controller="TestController")
+      h1 Angular Image 404 directive
+
+      p If the
+        code src
+        | of 
+        code img
+        | element can get the right image, You can use 
+        code angular-image-404
+        | directive to show the fallback image.
+
+      h3 basic usage
+      pre &lt;img src="./notFound.jpg" image-404="./fallback.jpg" width=200 height=120&gt;
+      p if the 
+        code image-404
+        | is empty, directive will get placeholder image from 
+        a(href="http://dummyimage.com") dummyimage.com
+        | .
+
+      img(src="http://abc/notfound.jpg", image-404, width=200, height=120)
+
+
+    script(src="#{bundleFileName.js}")
