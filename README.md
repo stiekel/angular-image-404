@@ -36,3 +36,5 @@ and you can set the attribute `image-404` as empty:
 ```html
 <img src="./notFound.jpg" image-404 width=200 height=120>
 ```
+
+if `image-404` set as empty, directive will get placeholder image from [http://dummyimage.com](http://dummyimage.com).
