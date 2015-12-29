@@ -4,15 +4,18 @@ angular.module('angular-image-404', [])
       restrict: 'A',
       link: function(scope, element, attributes){
         var notFoundCount = 0;
-        element.on('error', function(){
+        if(!attributes.src) {
+          changeSCR();
+        }
+        element.on('error', changeSCR);
+        function changeSCR(){
           var newIamgeUrl = attributes.angular404;
           if(notFoundCount >= 3 || !newIamgeUrl) {
             newIamgeUrl = getDefaultImagePlaceholder();
           }
           element.attr('src', newIamgeUrl);
           notFoundCount++;
-        });
-
+        }
         function getDefaultImagePlaceholder() {
           var width = element[0].offsetWidth || 120;
           var height = element[0].offsetHeight || 120;
