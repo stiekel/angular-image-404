@@ -9,7 +9,7 @@ angular.module('angular-image-404', [])
         }
         element.on('error', changeSCR);
         function changeSCR(){
-          var newIamgeUrl = attributes.angular404;
+          var newIamgeUrl = attributes.image404;
           if(notFoundCount >= 3 || !newIamgeUrl) {
             newIamgeUrl = getDefaultImagePlaceholder();
           }
