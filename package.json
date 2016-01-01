@@ -1,6 +1,6 @@
 {
   "name": "angular-image-404",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "AngualrJS directive that shows a fallback image when img element can not show picture correct",
   "main": "gulpfile.js",
   "directories": {
