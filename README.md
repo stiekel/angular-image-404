@@ -45,7 +45,17 @@ And you can set the attribute `image-404` as empty:
 <img src="./notFound.jpg" image-404 width=200 height=120>
 ```
 
-if `image-404` set as empty, directive will get placeholder image from [http://dummyimage.com](http://dummyimage.com).
+if `image-404` set as empty, directive will get placeholder image from [http://dummyimage.com](http://dummyimage.com), and you can set the fallback image with the following attribute:
+
+*   `fb-bgcolor`: background color
+*   `fb-color`: color of the text on the image
+*   `fb-text`: text on the image
+
+like this:
+
+```html
+<img src="./notFound.jpg" image-404 fb-bgcolor="#C0392B" fb-color="#C5EFF7" fb-text="Not Found" width=200 height=120>
+```
 
 
 # Test & Release
