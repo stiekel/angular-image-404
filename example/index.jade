@@ -16,14 +16,20 @@ html(ng-app="app")
         | directive to show the fallback image.
 
       h3 basic usage
-      pre &lt;img src="./notFound.jpg" image-404="./fallback.jpg" width=200 height=120&gt;
+      pre &lt;img src="./notFound.jpg" image-404="./fallback.jpg" fb-bgcolor="#C0392B" fb-color="#C5EFF7" fb-text="Not Found" width=200 height=120&gt;
       p if the 
         code image-404
         | is empty, directive will get placeholder image from 
         a(href="http://dummyimage.com") dummyimage.com
-        | .
+        | , and 
+        code fb-bgcolor
+        | can set the background color of the default image, 
+        code fb-color
+        | set the color, 
+        code fb-text
+        | set the text on the image.
 
-      img(src="http://abc/notfound.jpg", image-404, width=200, height=120)
+      img(src="http://abc/notfound.jpg", image-404, fb-bgcolor="#C0392B", fb-color="#C5EFF7", fb-text="Not Found", width=200, height=120)
 
 
     script(src="#{bundleFileName.js}")
