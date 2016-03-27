@@ -17,11 +17,22 @@ angular.module('angular-image-404', [])
           notFoundCount++;
         }
         function getDefaultImagePlaceholder() {
-          var width = element[0].offsetWidth || 120;
-          var height = element[0].offsetHeight || 120;
+          var width = angular.element(element[0]).attr('max-width') || element[0].offsetWidth || 120;
+          var height = angular.element(element[0]).attr('max-height') || element[0].offsetHeight || 120;
+          var bgcolor = attributes.fbBgcolor.replace('#', '') || "";
+          var color = attributes.fbColor.replace('#', '') || "";
+          var text = attributes.fbText || "";
+          var result = '';
           var protocol = window.location.href.split('://').shift();
           if(!protocol) protocol = 'http';
-          return protocol + '://dummyimage.com/' + width + 'x' + height;
+          result = protocol + '://dummyimage.com/' + width + 'x' + height;
+          if(bgcolor && color) {
+            result += '/' + bgcolor + '/' + color;
+          }
+          if(text) {
+            result += '&text=' + text;
+          }
+          return result;
         }
       }
     }
