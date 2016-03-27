@@ -58,7 +58,7 @@ gulp.task('release', function(){
 });
 
 gulp.task('watch', function(){
-  gulp.watch(['./angular-image-404.js', './example/index.jade', './example/app.js'], ['prepareTest']);
+  gulp.watch(['./src/angular-image-404.js', './angular-image-404.js', './example/index.jade', './example/app.js'], ['prepareTest']);
 });
 
 gulp.task('webserver', function(){
