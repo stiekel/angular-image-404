@@ -51,10 +51,18 @@ if `image-404` set as empty, directive will get placeholder image from [http://d
 *   `fb-color`: color of the text on the image
 *   `fb-text`: text on the image
 
+You can use `width` / `height` / `max-width` / `max-height` to set the size of the placeholder.
+
 like this:
 
 ```html
-<img src="./notFound.jpg" image-404 fb-bgcolor="#C0392B" fb-color="#C5EFF7" fb-text="Not Found" width=200 height=120>
+<img src="./notFound.jpg"
+      image-404 
+      fb-bgcolor="#C0392B" 
+      fb-color="#C5EFF7" 
+      fb-text="Not Found" 
+      max-width=200 
+      height=120>
 ```
 
 
