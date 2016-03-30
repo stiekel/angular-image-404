@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>Angular Image 404 directive example</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body><a href="https://github.com/stiekel/angular-image-404"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <div ng-controller="TestController" class="container">
+      <h1>Angular Image 404 directive</h1>
+      <p>If the<code>src</code>of <code>img</code>element can get the right image, You can use <code>angular-image-404</code>directive to show the fallback image.</p>
+      <h3>basic usage</h3>
+      <pre>&lt;img src="./notFound.jpg" image-404="./fallback.jpg" width=200 height=120&gt;</pre>
+      <p>if the <code>image-404</code>is empty, directive will get placeholder image from <a href="http://dummyimage.com">dummyimage.com</a>, and <code>fb-bgcolor</code>can set the background color of the default image, <code>fb-color</code>set the color, <code>fb-text</code>set the text on the image, like:
+        <pre>&lt;img src="./notFound.jpg" image-404 fb-bgcolor="#C0392B" fb-color="#C5EFF7" fb-text="Not Found" max-width=200 height=120&gt;</pre>
+      </p><img src="http://abc/notfound.jpg" image-404 fb-bgcolor="#C0392B" fb-color="#C5EFF7" max-width="200" height="120">
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
