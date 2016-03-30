@@ -3,6 +3,8 @@
 # angular-image-404
 AngualrJS directive that shows a fallback image when img element can not show picture correct.
 
+#[DEMO](http://stiekel.github.io/angular-image-404/)
+
 # Install
 
 You can install this directive with npm:
