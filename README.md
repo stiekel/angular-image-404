@@ -1,2 +1,1 @@
-# angular-image-404
-AngualrJS directive that shows a fallback image when img element can not show picture correct.
+[DEMO of angular-image-404](http://stiekel.github.io/angular-image-404/)
