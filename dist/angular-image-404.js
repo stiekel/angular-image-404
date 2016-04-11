@@ -19,8 +19,8 @@ angular.module('angular-image-404', [])
         function getDefaultImagePlaceholder() {
           var width = angular.element(element[0]).attr('max-width') || element[0].offsetWidth || 120;
           var height = angular.element(element[0]).attr('max-height') || element[0].offsetHeight || 120;
-          var bgcolor = attributes.fbBgcolor.replace('#', '') || "";
-          var color = attributes.fbColor.replace('#', '') || "";
+          var bgcolor = attributes.fbBgcolor ? attributes.fbBgcolor.replace('#', '') : "";
+          var color = attributes.fbColor ? attributes.fbColor.replace('#', '') : "";
           var text = attributes.fbText || "";
           var result = '';
           var protocol = window.location.href.split('://').shift();
